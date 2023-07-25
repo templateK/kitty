@@ -32,7 +32,6 @@
 
 #include <Availability.h>
 #import <CoreServices/CoreServices.h>
-#import <UniformTypeIdentifiers/UniformTypeIdentifiers.h>
 #include <float.h>
 #include <string.h>
 
@@ -2624,10 +2623,6 @@ bool _glfwPlatformToggleFullscreen(_GLFWwindow* w, unsigned int flags) {
 static NSString*
 mime_to_uti(const char *mime) {
     if (strcmp(mime, "text/plain") == 0) return NSPasteboardTypeString;
-    if (@available(macOS 11.0, *)) {
-        UTType *t = [UTType typeWithMIMEType:@(mime)];  // auto-released
-        if (t != nil && !t.dynamic) return t.identifier;
-    }
     return [NSString stringWithFormat:@"%@%s", UTI_ROUNDTRIP_PREFIX, mime];  // auto-released
 }
 
@@ -2635,10 +2630,6 @@ static const char*
 uti_to_mime(NSString *uti) {
     if ([uti isEqualToString:NSPasteboardTypeString]) return "text/plain";
     if ([uti hasPrefix:UTI_ROUNDTRIP_PREFIX]) return [[uti substringFromIndex:[UTI_ROUNDTRIP_PREFIX length]] UTF8String];
-    if (@available(macOS 11.0, *)) {
-        UTType *t = [UTType typeWithIdentifier:uti];  // auto-released
-        if (t.preferredMIMEType != nil) return [t.preferredMIMEType UTF8String];
-    }
     return "";
 }
 
