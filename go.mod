@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/ALTree/bigfloat v0.0.0-20220102081255-38c8b72a9924
-	github.com/alecthomas/chroma/v2 v2.8.0
+	github.com/alecthomas/chroma/v2 v2.9.1
 	github.com/bmatcuk/doublestar/v4 v4.6.0
 	github.com/disintegration/imaging v1.6.2
 	github.com/dlclark/regexp2 v1.10.0
@@ -14,8 +14,8 @@ require (
 	github.com/seancfoley/ipaddress-go v1.5.4
 	github.com/shirou/gopsutil/v3 v3.23.6
 	golang.org/x/exp v0.0.0-20230321023759-10a507213a29
-	golang.org/x/sys v0.10.0
 	golang.org/x/image v0.9.0
+	golang.org/x/sys v0.10.0
 	howett.net/plist v1.0.0
 )
 
