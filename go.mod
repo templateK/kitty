@@ -9,13 +9,13 @@ require (
 	github.com/disintegration/imaging v1.6.2
 	github.com/dlclark/regexp2 v1.10.0
 	github.com/google/go-cmp v0.5.9
-	github.com/google/uuid v1.3.0
+	github.com/google/uuid v1.4.0
 	github.com/jamesruan/go-rfc1924 v0.0.0-20170108144916-2767ca7c638f
 	github.com/seancfoley/ipaddress-go v1.5.4
 	github.com/shirou/gopsutil/v3 v3.23.6
 	golang.org/x/exp v0.0.0-20230321023759-10a507213a29
-	golang.org/x/sys v0.10.0
 	golang.org/x/image v0.9.0
+	golang.org/x/sys v0.10.0
 	howett.net/plist v1.0.0
 )
 
